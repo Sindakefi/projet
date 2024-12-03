@@ -1,0 +1,67 @@
+{
+  "components": [
+    {
+      "label": "patientEmail",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_19bvddr",
+        "columns": null
+      },
+      "id": "Field_1e1idri",
+      "key": "patientEmail",
+      "properties": {},
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "requestedDate",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_0zdqf07",
+        "columns": null
+      },
+      "id": "Field_13rphc6",
+      "key": "requestedDate",
+      "validate": {
+        "required": true
+      },
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_offset",
+      "timeInterval": 15
+    },
+    {
+      "label": "consultationType",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0y4agyp",
+        "columns": null
+      },
+      "id": "Field_1muzc57",
+      "key": "consultationType",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Button",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1x4y2iv",
+        "columns": null
+      },
+      "id": "Field_07i2uae"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1irpxi0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.29.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "schemaVersion": 17
+}

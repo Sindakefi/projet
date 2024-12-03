@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="dmn" name="DMN" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.29.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.23.0">
+  <decision id="schedule" name="Doctor availability" camunda:historyTimeToLive="30">
+    <decisionTable id="DecisionTable_0bso4cg">
+      <input id="Input_1" label="requestedDate" biodi:width="192">
+        <inputExpression id="InputExpression_1" typeRef="date">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_01j4k73" label="consultationType">
+        <inputExpression id="LiteralExpression_103nju9" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Availability" typeRef="string" />
+      <rule id="DecisionRule_1p8r16s">
+        <inputEntry id="UnaryTests_0504uyx">
+          <text>date and time("2024-12-02T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01bu0z8">
+          <text>"General Check-up"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0owqe1u">
+          <text>"Available"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xodpzc">
+        <inputEntry id="UnaryTests_1fvc2wq">
+          <text>date and time("2024-12-02T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dz5g60">
+          <text>"Neurology"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rd0n0a">
+          <text>"Unavailable"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_152ytlt">
+        <inputEntry id="UnaryTests_0uv8k7s">
+          <text>date and time("2024-12-03T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jrn1qd">
+          <text>"General Check-up"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cloqgy">
+          <text>"Unavailable"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fqgvmz">
+        <inputEntry id="UnaryTests_14h7j7j">
+          <text>date and time("2024-12-03T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j8ka0s">
+          <text>"General Check-up"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m0wc75">
+          <text>"Available"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19udmak">
+        <inputEntry id="UnaryTests_0vw0a9n">
+          <text>date and time("2024-12-03T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gjpze5">
+          <text>"Cardiology"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r8o2gk">
+          <text>"Available"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16mna3z">
+        <inputEntry id="UnaryTests_14bzqrr">
+          <text>date and time("2024-12-04T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06cxo00">
+          <text>"Cardiology"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rwx1le">
+          <text>"Available"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="schedule">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
